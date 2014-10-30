@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ie.aib</groupId>
+		<artifactId>research</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../research/pom.xml</relativePath>
+	</parent>
+	<artifactId>hellogrizzly</artifactId>
+	<packaging>jar</packaging>
+
+	<name>hellogrizzly</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<grizzly-framework.version>2.3.14</grizzly-framework.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.glassfish.grizzly</groupId>
+			<artifactId>grizzly-framework</artifactId>
+			<version>${grizzly-framework.version}</version>
+		</dependency>
+	</dependencies>
+</project>
