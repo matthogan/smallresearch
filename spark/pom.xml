@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.softhog</groupId>
+		<artifactId>research</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../research/pom.xml</relativePath>
+	</parent>
+	<artifactId>spark</artifactId>
+	<packaging>war</packaging>
+
+	<name>spark</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<javaee-api.version>7.0</javaee-api.version>
+		<spark-core.version>2.0.0</spark-core.version>
+		<commons-lang.version>2.6</commons-lang.version>
+		<gson.version>2.3</gson.version>
+		<db2driver-version>1</db2driver-version>
+		<db2-version>4.16.53</db2-version>
+		<hibernate-entitymanager.version>4.3.6.Final</hibernate-entitymanager.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sparkjava</groupId>
+			<artifactId>spark-core</artifactId>
+			<version>${spark-core.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javaee-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate-entitymanager.version}</version>
+		</dependency>
+
+		<!-- JSON/Java -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+		</dependency>
+
+		<!-- Utilities -->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons-lang.version}</version>
+		</dependency>
+
+		<!-- DB2 -->
+		<dependency>
+			<groupId>com.ibm</groupId>
+			<artifactId>db2</artifactId>
+			<version>${db2-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm</groupId>
+			<artifactId>db2</artifactId>
+			<version>${db2driver-version}</version>
+			<classifier>_license_cisuz</classifier>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm</groupId>
+			<artifactId>db2</artifactId>
+			<version>${db2driver-version}</version>
+			<classifier>_license_cu</classifier>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>spark</finalName>
+		<sourceDirectory>src\main\java</sourceDirectory>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
+	</build>
+</project>

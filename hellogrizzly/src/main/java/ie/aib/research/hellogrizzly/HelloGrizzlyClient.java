@@ -30,6 +30,7 @@ public class HelloGrizzlyClient
      * 
      * @param args
      */
+    @SuppressWarnings ( "unchecked")
     public static void main( String[] args ) throws IOException, TimeoutException, ExecutionException,
                     InterruptedException
     {
@@ -51,6 +52,7 @@ public class HelloGrizzlyClient
         {
             tcpnio.start();
 
+            @SuppressWarnings ( "rawtypes")
             Future<Connection> future = tcpnio.connect( HelloGrizzlyServer.HOST, HelloGrizzlyServer.PORT );
 
             conn = future.get( 10, TimeUnit.SECONDS );
