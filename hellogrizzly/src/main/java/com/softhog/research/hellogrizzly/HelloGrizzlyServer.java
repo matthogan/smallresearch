@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ie.aib.research.hellogrizzly;
+package com.softhog.research.hellogrizzly;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

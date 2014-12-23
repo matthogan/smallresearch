@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ie.aib.research.hellogrizzly;
+package com.softhog.research.hellogrizzly;
 
 import java.io.BufferedReader;
 import java.io.IOException;
